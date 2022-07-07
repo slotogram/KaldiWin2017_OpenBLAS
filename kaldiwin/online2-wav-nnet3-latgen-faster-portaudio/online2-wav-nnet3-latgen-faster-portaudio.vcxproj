@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.1" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{e6ff3662-8d47-49d3-ab5a-e64279e2bb47}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>online2_wav_nnet3_latgen_faster_portaudio</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="..\variables.props" />
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\kaldiwin_win32.props" />
+    <Import Project="..\openfstwin_debug_win32.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="..\variables.props" />
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\kaldiwin.props" />
+    <Import Project="..\openfstwin_debug.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="..\variables.props" />
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\kaldiwin_win32.props" />
+    <Import Project="..\openfstwin_release_win32.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="..\variables.props" />
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\kaldiwin.props" />
+    <Import Project="..\openfstwin_release.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\programs\kaldi\src;C:\programs\kaldi\kaldiwin_vs2017_OPENBLAS\kaldiwin\online2-wav-nnet3-latgen-faster-portaudio-dll;C:\programs\openfst-winport\src\include;C:\programs\kaldi\kaldiwin_vs2017_OPENBLAS\Release;C:\programs\portaudio\src\common;C:\programs\portaudio\include;$(IncludePath);$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>C:\programs\openfst-winport\build_output\x86\Release\lib;C:\programs\kaldi\kaldiwin_vs2017_OPENBLAS\Release;C:\programs\kaldi\tools\portaudio;$(LibraryPath);$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\programs\kaldi\kaldiwin_vs2017_OPENBLAS\x64\Release;C:\programs\kaldi\src;C:\programs\portaudio\src\common;C:\programs\portaudio\include;$(IncludePath);$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>C:\programs\kaldi\kaldiwin_vs2017_OPENBLAS\x64\Release;C:\programs\kaldi\tools\portaudio;$(LibraryPath);$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>kaldi-online.lib;portaudio_x86.lib;fst_Win32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>kaldi-online.lib;portaudio_x64.lib;fst.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\kaldi-base\kaldi-base.vcxproj">
+      <Project>{9932ea12-cb0c-4181-b137-7aee57a16d45}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\kaldi-chain\kaldi-chain.vcxproj">
+      <Project>{c1ef219b-7957-4da7-ab69-7d6f8bd5d6ac}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\kaldi-cudamatrix\kaldi-cudamatrix.vcxproj">
+      <Project>{55847f23-6ad3-48db-b59a-8ac09d6a2bc9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\kaldi-decoder\kaldi-decoder.vcxproj">
+      <Project>{5aa1b7f9-2e16-4b34-80a5-96430bb06180}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\kaldi-feat\kaldi-feat.vcxproj">
+      <Project>{124d091f-4635-4a41-94f0-6e3bbe7b7183}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\kaldi-fstext\kaldi-fstext.vcxproj">
+      <Project>{f224fa1e-3fcd-4d6c-b226-55233ae8e17b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\kaldi-gmm\kaldi-gmm.vcxproj">
+      <Project>{ea1fb601-f57f-4204-815c-4b5cd2eb819e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\kaldi-hmm\kaldi-hmm.vcxproj">
+      <Project>{3cdc54d6-62fe-4afc-9c56-3ae31bade0d0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\kaldi-ivector\kaldi-ivector.vcxproj">
+      <Project>{b2bda846-ef8f-43b4-aa94-00f1906bb957}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\kaldi-lat\kaldi-lat.vcxproj">
+      <Project>{a1c368f0-be46-40e7-b694-1d34bbc5523a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\kaldi-matrix\kaldi-matrix.vcxproj">
+      <Project>{d2c8713d-acc7-4444-869d-a6b69de35a19}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\kaldi-nnet2\kaldi-nnet2.vcxproj">
+      <Project>{389db92a-4c7a-48cf-9a5e-f7471360f05c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\kaldi-nnet3\kaldi-nnet3.vcxproj">
+      <Project>{ee10ea51-b1b8-44e3-a29f-6d3ede900a5c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\kaldi-online2\kaldi-online2.vcxproj">
+      <Project>{cc11f5bf-e831-43e9-bd43-8fa9348fcaf0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\kaldi-transform\kaldi-transform.vcxproj">
+      <Project>{93da9c09-bcca-4940-93d6-5f7d03b75d45}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\kaldi-tree\kaldi-tree.vcxproj">
+      <Project>{cf5be8db-f7f2-40db-8897-8a3512ddd95b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\kaldi-util\kaldi-util.vcxproj">
+      <Project>{3851ac91-8207-4207-b788-a4765332edf5}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\online2bin\online2-wav-nnet3-latgen-faster-portaudio.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\online\online-audio-source.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
